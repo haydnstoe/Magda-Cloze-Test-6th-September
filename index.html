@@ -1,22 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Interactive Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloze Test: Olivia Ferney’s Luxury Travel Stories</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; line-height: 1.6; }
+    .question { margin-bottom: 1.5rem; }
+    .question input { width: 200px; padding: 0.25rem; }
+    .question button { margin-left: 0.5rem; }
+    .feedback { margin-top: 0.5rem; color: #333; }
+    #finalScore { font-weight: bold; margin-top: 2rem; }
+  </style>
 </head>
 <body>
-  <h1>HTML Basics Quiz</h1>
-  <form id="quiz-form">
-    <div>
-      <p>1. What does HTML stand for?</p>
-      <input type="radio" name="q1" value="a"> Home Tool Markup Language<br>
-      <input type="radio" name="q1" value="b"> HyperText Markup Language<br>
-      <input type="radio" name="q1" value="c"> Hyperlink Text Management Language<br>
-    </div>
-    <button type="button" onclick="submitQuiz()">Submit</button>
-  </form>
-  <div id="result"></div>
 
-  <script src="script.js"></script>
+  <h1>Cloze Test: Olivia Ferney’s Luxury Travel Stories</h1>
+  <p>Fill in each blank with the correct word or phrasal verb from the provided list. Click “Submit” to check your answer, see the definition, and view an example.</p>
+  
+  <div id="test">
+  
+    <div class="question" id="q1">
+      <p>1. The travel adviser specialized in arranging <input id="input1" /> experiences for the ultra-wealthy.</p>
+      <button id="btn1" onclick="checkAnswer(1)">Submit</button>
+      <div class="feedback" id="feedback1"></div>
+    </div>
+  
+    <div class="question" id="q2">
+      <p>2. She called the resort to find out where the limes were <input id="input2" /> from.</p>
+      <button id="btn2" onclick="checkAnswer(2)">Submit</button>
+      <div class="feedback" id="feedback2"></div>
+    </div>
+  
+    <div class="question" id="q3">
+      <p>3. The client was <input id="input3" /> about avoiding allergic reactions to certain fruits.</p>
+      <button id="btn3" onclick="checkAnswer(3)">Submit</button>
+      <div class="feedback" id="feedback3"></div>
+    </div>
+  
+    <div class="question" id="q4">
+      <p>4. Ms. Ferney quickly <input id="input4" /> a massive following on social media.</p>
+      <button id="btn4" onclick="checkAnswer(4)">Submit</button>
+      <div class="feedback" id="feedback4"></div>
+    </div>
+  
+    <div class="question" id="q5">
+      <p>5. He was <input id="input5" /> $100,000 for the no-contact vacation as per the client’s request.</p>
+      <button id="btn5" onclick="checkAnswer(5)">Submit</button>
+      <div class="feedback" id="feedback5"></div>
+    </div>
+  
+    <div class="question" id="q6">
+      <p>6. Another client feared her new implants might <input id="input6" /> during the flight.</p>
+      <button id="btn6" onclick="checkAnswer(6)">Submit</button>
+      <div class="feedback" id="feedback6"></div>
+    </div>
+  
+    <div class="question" id="q7">
+      <p>7. The worried passenger <input id="input7" /> on a last-minute doctor’s consult.</p>
+      <button id="btn7" onclick="checkAnswer(7)">Submit</button>
+      <div class="feedback" id="feedback7"></div>
+    </div>
+  
+    <div class="question" id="q8">
+      <p>8. When seas got rough, the woman needed to be <input id="input8" /> from the charter boat.</p>
+      <button id="btn8" onclick="checkAnswer(8)">Submit</button>
+      <div class="feedback" id="feedback8"></div>
+    </div>
+  
+    <div class="question" id="q9">
+      <p>9. By that point, she was so <input id="input9" /> that she demanded a submarine.</p>
+      <button id="btn9" onclick="checkAnswer(9)">Submit</button>
+      <div class="feedback" id="feedback9"></div>
+    </div>
+  
+    <div class="question" id="q10">
+      <p>10. Fans loved the <input id="input10" /> complaints of the ultra-rich recorded on TikTok.</p>
+      <button id="btn10" onclick="checkAnswer(10)">Submit</button>
+      <div class="feedback" id="feedback10"></div>
+    </div>
+  
+    <div class="question" id="q11">
+      <p>11. Ms. Ferney came from a <input id="input11" /> background and was surprised by every request.</p>
+      <button id="btn11" onclick="checkAnswer(11)">Submit</button>
+      <div class="feedback" id="feedback11"></div>
+    </div>
+  
+    <div class="question" id="q12">
+      <p>12. She heard the client complain that the tap water made her scalp <input id="input12" />.</p>
+      <button id="btn12" onclick="checkAnswer(12)">Submit</button>
+      <div class="feedback" id="feedback12"></div>
+    </div>
+  
+    <div class="question" id="q13">
+      <p>13. After hours on hold, Ms. Ferney’s voice sounded <input id="input13" /> by exhaustion.</p>
+      <button id="btn13" onclick="checkAnswer(13)">Submit</button>
+      <div class="feedback" id="feedback13"></div>
+    </div>
+  
+    <div class="question" id="q14">
+      <p>14. Those yacht parties in rough seas led to some truly <input id="input14" /> scenarios.</p>
+      <button id="btn14" onclick="checkAnswer(14)">Submit</button>
+      <div class="feedback" id="feedback14"></div>
+    </div>
+  
+    <div class="question" id="q15">
+      <p>15. Her calm demeanor was <input id="input15" /> in part to her poolside setting.</p>
+      <button id="btn15" onclick="checkAnswer(15)">Submit</button>
+      <div class="feedback" id="feedback15"></div>
+    </div>
+  
+    <div class="question" id="q16">
+      <p>16. Each billionaire had <input id="input16" /> tastes when it came to their vacations.</p>
+      <button id="btn16" onclick="checkAnswer(16)">Submit</button>
+      <div class="feedback" id="feedback16"></div>
+    </div>
+  
+    <div class="question" id="q17">
+      <p>17. The phone call became so <input id="input17" /> that she needed to lower her tone.</p>
+      <button id="btn17" onclick="checkAnswer(17)">Submit</button>
+      <div class="feedback" id="feedback17"></div>
+    </div>
+  
+    <div class="question" id="q18">
+      <p>18. She knew exactly how to <input id="input18" /> a frustrated client with an extra margarita.</p>
+      <button id="btn18" onclick="checkAnswer(18)">Submit</button>
+      <div class="feedback" id="feedback18"></div>
+    </div>
+  
+    <div class="question" id="q19">
+      <p>19. Even billionaire <input id="input19" /> at times were thrilled by a small discount.</p>
+      <button id="btn19" onclick="checkAnswer(19)">Submit</button>
+      <div class="feedback" id="feedback19"></div>
+    </div>
+  
+    <div class="question" id="q20">
+      <p>20. Ms. Ferney had to <input id="input20" /> dozens of unusual requests every day.</p>
+      <button id="btn20" onclick="checkAnswer(20)">Submit</button>
+      <div class="feedback" id="feedback20"></div>
+    </div>
+  
+  </div>
+  
+  <div id="finalScore"></div>
+  
+  <script>
+    const answers = [
+      "high-end", "sourced", "certain", "gained", "charged",
+      "rupture", "insisted", "extracted", "agitated", "over-the-top",
+      "middle-class", "itchy", "numb", "outlandish", "rooted",
+      "peculiar", "heated", "soothe", "plutocrats", "process"
+    ];
+    const definitions = [
+      "expensive or of superior quality.",
+      "obtained from a particular place.",
+      "specific or particular.",
+      "acquired or obtained.",
+      "billed an amount.",
+      "to break or burst.",
+      "demanded firmly.",
+      "removed or taken out.",
+      "upset or disturbed.",
+      "excessive or exaggerated.",
+      "of moderate income and social standing.",
+      "causing an urge to scratch.",
+      "lacking feeling or responsiveness.",
+      "bizarre or unfamiliar.",
+      "based upon or grounded in.",
+      "strange or unusual.",
+      "intense or passionate.",
+      "to calm or comfort.",
+      "very wealthy individuals.",
+      "to handle or deal with."
+    ];
+    const examples = [
+      "She booked a high-end villa in Bali for her client’s retreat.",
+      "All the seafood was sustainably sourced from local fishermen.",
+      "The client was certain she wanted only organic produce.",
+      "She gained a huge audience after posting her first call.",
+      "They charged him an extra fee for late checkout.",
+      "The athlete feared the injury could rupture the tendon.",
+      "He insisted on speaking to the manager immediately.",
+      "They extracted the data from the client’s previous trips.",
+      "She grew agitated when the flight was delayed again.",
+      "The party decorations were completely over-the-top.",
+      "He grew up in a middle-class neighborhood in Ontario.",
+      "The wool sweater felt itchy against her skin.",
+      "After the nerve block, her leg went completely numb.",
+      "Guests shared outlandish stories of their private jets.",
+      "Her confidence is rooted in years of experience.",
+      "His peculiar request involved a midnight museum tour.",
+      "They had a heated debate over seating arrangements.",
+      "A soft lullaby can soothe a crying baby.",
+      "Only a handful of plutocrats attend that gala.",
+      "It took me a moment to process the shocking news."
+    ];
+    let score = 0;
+    let answeredCount = 0;
+    const answered = Array(20).fill(false);
+  
+    function checkAnswer(i) {
+      const idx = i - 1;
+      if (answered[idx]) return;
+      answered[idx] = true;
+      answeredCount++;
+  
+      const inputEl = document.getElementById("input" + i);
+      const userAns = inputEl.value.trim().toLowerCase();
+      inputEl.disabled = true;
+  
+      const btnEl = document.getElementById("btn" + i);
+      btnEl.disabled = true;
+  
+      const feedbackEl = document.getElementById("feedback" + i);
+      if (userAns === answers[idx]) {
+        score++;
+        feedbackEl.innerHTML = 
+          "Correct! Definition: " + definitions[idx] + 
+          " Example: " + examples[idx];
+      } else {
+        feedbackEl.innerHTML = 
+          "Incorrect. The correct answer is \"" + answers[idx] + 
+          "\". Definition: " + definitions[idx] + 
+          " Example: " + examples[idx];
+      }
+  
+      if (answeredCount === answers.length) {
+        const percent = Math.round((score / answers.length) * 100);
+        document.getElementById("finalScore").textContent = 
+          "You scored " + score + " out of " + answers.length + 
+          " (" + percent + "%).";
+      }
+    }
+  </script>
+
 </body>
 </html>
