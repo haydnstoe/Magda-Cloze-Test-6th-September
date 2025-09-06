@@ -7,7 +7,7 @@
   <style>
     body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; line-height: 1.6; }
     .question { margin-bottom: 1.5rem; }
-    .question input { width: 200px; padding: 0.25rem; }
+    .question select { width: 220px; padding: 0.25rem; }
     .question button { margin-left: 0.5rem; }
     .feedback { margin-top: 0.5rem; color: #333; }
     #finalScore { font-weight: bold; margin-top: 2rem; }
@@ -16,140 +16,318 @@
 <body>
 
   <h1>Cloze Test: Olivia Ferney’s Luxury Travel Stories</h1>
-  <p>Fill in each blank with the correct word or phrasal verb from the provided list. Click “Submit” to check your answer, see the definition, and view an example.</p>
+  <p>Choose the correct word or phrasal verb from the dropdown for each blank. Click “Submit” to check your answer, see the definition, and view an example.</p>
   
   <div id="test">
-  
     <div class="question" id="q1">
-      <p>1. The travel adviser specialized in arranging <input id="input1" /> experiences for the ultra-wealthy.</p>
+      <p>1. The travel adviser specialized in arranging 
+        <select id="select1">
+          <option value="">--Select--</option>
+          <option value="high-end">high-end</option>
+          <option value="middle-class">middle-class</option>
+          <option value="over-the-top">over-the-top</option>
+          <option value="sourced">sourced</option>
+        </select> 
+        experiences for the ultra-wealthy.
+      </p>
       <button id="btn1" onclick="checkAnswer(1)">Submit</button>
       <div class="feedback" id="feedback1"></div>
     </div>
-  
+
     <div class="question" id="q2">
-      <p>2. She called the resort to find out where the limes were <input id="input2" /> from.</p>
+      <p>2. She called the resort to find out where the limes were 
+        <select id="select2">
+          <option value="">--Select--</option>
+          <option value="sourced">sourced</option>
+          <option value="extracted">extracted</option>
+          <option value="rooted">rooted</option>
+          <option value="charged">charged</option>
+        </select> 
+        from.
+      </p>
       <button id="btn2" onclick="checkAnswer(2)">Submit</button>
       <div class="feedback" id="feedback2"></div>
     </div>
-  
+
     <div class="question" id="q3">
-      <p>3. The client was <input id="input3" /> about avoiding allergic reactions to certain fruits.</p>
+      <p>3. The client was 
+        <select id="select3">
+          <option value="">--Select--</option>
+          <option value="certain">certain</option>
+          <option value="peculiar">peculiar</option>
+          <option value="numb">numb</option>
+          <option value="process">process</option>
+        </select> 
+        about avoiding allergic reactions to fruits.
+      </p>
       <button id="btn3" onclick="checkAnswer(3)">Submit</button>
       <div class="feedback" id="feedback3"></div>
     </div>
-  
+
     <div class="question" id="q4">
-      <p>4. Ms. Ferney quickly <input id="input4" /> a massive following on social media.</p>
+      <p>4. Ms. Ferney quickly 
+        <select id="select4">
+          <option value="">--Select--</option>
+          <option value="gained">gained</option>
+          <option value="charged">charged</option>
+          <option value="extracted">extracted</option>
+          <option value="plutocrats">plutocrats</option>
+        </select> 
+        a massive following on social media.
+      </p>
       <button id="btn4" onclick="checkAnswer(4)">Submit</button>
       <div class="feedback" id="feedback4"></div>
     </div>
-  
+
     <div class="question" id="q5">
-      <p>5. He was <input id="input5" /> $100,000 for the no-contact vacation as per the client’s request.</p>
+      <p>5. He was 
+        <select id="select5">
+          <option value="">--Select--</option>
+          <option value="charged">charged</option>
+          <option value="gained">gained</option>
+          <option value="process">process</option>
+          <option value="soothe">soothe</option>
+        </select> 
+        $100,000 for the no-contact vacation as per the client’s request.
+      </p>
       <button id="btn5" onclick="checkAnswer(5)">Submit</button>
       <div class="feedback" id="feedback5"></div>
     </div>
-  
+
     <div class="question" id="q6">
-      <p>6. Another client feared her new implants might <input id="input6" /> during the flight.</p>
+      <p>6. Another client feared her new implants might 
+        <select id="select6">
+          <option value="">--Select--</option>
+          <option value="rupture">rupture</option>
+          <option value="numb">numb</option>
+          <option value="process">process</option>
+          <option value="over-the-top">over-the-top</option>
+        </select> 
+        during the flight.
+      </p>
       <button id="btn6" onclick="checkAnswer(6)">Submit</button>
       <div class="feedback" id="feedback6"></div>
     </div>
-  
+
     <div class="question" id="q7">
-      <p>7. The worried passenger <input id="input7" /> on a last-minute doctor’s consult.</p>
+      <p>7. The worried passenger 
+        <select id="select7">
+          <option value="">--Select--</option>
+          <option value="insisted">insisted</option>
+          <option value="agitated">agitated</option>
+          <option value="peculiar">peculiar</option>
+          <option value="sourced">sourced</option>
+        </select> 
+        on a last-minute doctor’s consult.
+      </p>
       <button id="btn7" onclick="checkAnswer(7)">Submit</button>
       <div class="feedback" id="feedback7"></div>
     </div>
-  
+
     <div class="question" id="q8">
-      <p>8. When seas got rough, the woman needed to be <input id="input8" /> from the charter boat.</p>
+      <p>8. When seas got rough, the woman needed to be 
+        <select id="select8">
+          <option value="">--Select--</option>
+          <option value="extracted">extracted</option>
+          <option value="sourced">sourced</option>
+          <option value="charged">charged</option>
+          <option value="numb">numb</option>
+        </select> 
+        from the charter boat.
+      </p>
       <button id="btn8" onclick="checkAnswer(8)">Submit</button>
       <div class="feedback" id="feedback8"></div>
     </div>
-  
+
     <div class="question" id="q9">
-      <p>9. By that point, she was so <input id="input9" /> that she demanded a submarine.</p>
+      <p>9. By that point, she was so 
+        <select id="select9">
+          <option value="">--Select--</option>
+          <option value="agitated">agitated</option>
+          <option value="heated">heated</option>
+          <option value="over-the-top">over-the-top</option>
+          <option value="numb">numb</option>
+        </select> 
+        that she demanded a submarine.
+      </p>
       <button id="btn9" onclick="checkAnswer(9)">Submit</button>
       <div class="feedback" id="feedback9"></div>
     </div>
-  
+
     <div class="question" id="q10">
-      <p>10. Fans loved the <input id="input10" /> complaints of the ultra-rich recorded on TikTok.</p>
+      <p>10. Fans loved the 
+        <select id="select10">
+          <option value="">--Select--</option>
+          <option value="over-the-top">over-the-top</option>
+          <option value="outlandish">outlandish</option>
+          <option value="heated">heated</option>
+          <option value="certain">certain</option>
+        </select> 
+        complaints of the ultra-rich recorded on TikTok.
+      </p>
       <button id="btn10" onclick="checkAnswer(10)">Submit</button>
       <div class="feedback" id="feedback10"></div>
     </div>
-  
+
     <div class="question" id="q11">
-      <p>11. Ms. Ferney came from a <input id="input11" /> background and was surprised by every request.</p>
+      <p>11. Ms. Ferney came from a 
+        <select id="select11">
+          <option value="">--Select--</option>
+          <option value="middle-class">middle-class</option>
+          <option value="high-end">high-end</option>
+          <option value="plutocrats">plutocrats</option>
+          <option value="rooted">rooted</option>
+        </select> 
+        background and was surprised by every request.
+      </p>
       <button id="btn11" onclick="checkAnswer(11)">Submit</button>
       <div class="feedback" id="feedback11"></div>
     </div>
-  
+
     <div class="question" id="q12">
-      <p>12. She heard the client complain that the tap water made her scalp <input id="input12" />.</p>
+      <p>12. She heard the client complain that the tap water made her scalp 
+        <select id="select12">
+          <option value="">--Select--</option>
+          <option value="itchy">itchy</option>
+          <option value="numb">numb</option>
+          <option value="agitated">agitated</option>
+          <option value="peculiar">peculiar</option>
+        </select>.
+      </p>
       <button id="btn12" onclick="checkAnswer(12)">Submit</button>
       <div class="feedback" id="feedback12"></div>
     </div>
-  
+
     <div class="question" id="q13">
-      <p>13. After hours on hold, Ms. Ferney’s voice sounded <input id="input13" /> by exhaustion.</p>
+      <p>13. After hours on hold, Ms. Ferney’s voice sounded 
+        <select id="select13">
+          <option value="">--Select--</option>
+          <option value="numb">numb</option>
+          <option value="itchy">itchy</option>
+          <option value="soothe">soothe</option>
+          <option value="heated">heated</option>
+        </select> 
+        by exhaustion.
+      </p>
       <button id="btn13" onclick="checkAnswer(13)">Submit</button>
       <div class="feedback" id="feedback13"></div>
     </div>
-  
+
     <div class="question" id="q14">
-      <p>14. Those yacht parties in rough seas led to some truly <input id="input14" /> scenarios.</p>
+      <p>14. Those yacht parties in rough seas led to some truly 
+        <select id="select14">
+          <option value="">--Select--</option>
+          <option value="outlandish">outlandish</option>
+          <option value="over-the-top">over-the-top</option>
+          <option value="peculiar">peculiar</option>
+          <option value="high-end">high-end</option>
+        </select> 
+        scenarios.
+      </p>
       <button id="btn14" onclick="checkAnswer(14)">Submit</button>
       <div class="feedback" id="feedback14"></div>
     </div>
-  
+
     <div class="question" id="q15">
-      <p>15. Her calm demeanor was <input id="input15" /> in part to her poolside setting.</p>
+      <p>15. Her calm demeanor was 
+        <select id="select15">
+          <option value="">--Select--</option>
+          <option value="rooted">rooted</option>
+          <option value="sourced">sourced</option>
+          <option value="middle-class">middle-class</option>
+          <option value="process">process</option>
+        </select> 
+        in part to her poolside setting.
+      </p>
       <button id="btn15" onclick="checkAnswer(15)">Submit</button>
       <div class="feedback" id="feedback15"></div>
     </div>
-  
+
     <div class="question" id="q16">
-      <p>16. Each billionaire had <input id="input16" /> tastes when it came to their vacations.</p>
+      <p>16. Each billionaire had 
+        <select id="select16">
+          <option value="">--Select--</option>
+          <option value="peculiar">peculiar</option>
+          <option value="outlandish">outlandish</option>
+          <option value="certain">certain</option>
+          <option value="heated">heated</option>
+        </select> 
+        tastes when it came to their vacations.
+      </p>
       <button id="btn16" onclick="checkAnswer(16)">Submit</button>
       <div class="feedback" id="feedback16"></div>
     </div>
-  
+
     <div class="question" id="q17">
-      <p>17. The phone call became so <input id="input17" /> that she needed to lower her tone.</p>
+      <p>17. The phone call became so 
+        <select id="select17">
+          <option value="">--Select--</option>
+          <option value="heated">heated</option>
+          <option value="agitated">agitated</option>
+          <option value="over-the-top">over-the-top</option>
+          <option value="process">process</option>
+        </select> 
+        that she needed to lower her tone.
+      </p>
       <button id="btn17" onclick="checkAnswer(17)">Submit</button>
       <div class="feedback" id="feedback17"></div>
     </div>
-  
+
     <div class="question" id="q18">
-      <p>18. She knew exactly how to <input id="input18" /> a frustrated client with an extra margarita.</p>
+      <p>18. She knew exactly how to 
+        <select id="select18">
+          <option value="">--Select--</option>
+          <option value="soothe">soothe</option>
+          <option value="process">process</option>
+          <option value="rupture">rupture</option>
+          <option value="charged">charged</option>
+        </select> 
+        a frustrated client with an extra margarita.
+      </p>
       <button id="btn18" onclick="checkAnswer(18)">Submit</button>
       <div class="feedback" id="feedback18"></div>
     </div>
-  
+
     <div class="question" id="q19">
-      <p>19. Even billionaire <input id="input19" /> at times were thrilled by a small discount.</p>
+      <p>19. Even billionaire 
+        <select id="select19">
+          <option value="">--Select--</option>
+          <option value="plutocrats">plutocrats</option>
+          <option value="middle-class">middle-class</option>
+          <option value="high-end">high-end</option>
+          <option value="certain">certain</option>
+        </select> 
+        at times were thrilled by a small discount.
+      </p>
       <button id="btn19" onclick="checkAnswer(19)">Submit</button>
       <div class="feedback" id="feedback19"></div>
     </div>
-  
+
     <div class="question" id="q20">
-      <p>20. Ms. Ferney had to <input id="input20" /> dozens of unusual requests every day.</p>
+      <p>20. Ms. Ferney had to 
+        <select id="select20">
+          <option value="">--Select--</option>
+          <option value="process">process</option>
+          <option value="gained">gained</option>
+          <option value="rooted">rooted</option>
+          <option value="charged">charged</option>
+        </select> 
+        dozens of unusual requests every day.
+      </p>
       <button id="btn20" onclick="checkAnswer(20)">Submit</button>
       <div class="feedback" id="feedback20"></div>
     </div>
-  
+
   </div>
   
   <div id="finalScore"></div>
-  
+
   <script>
     const answers = [
-      "high-end", "sourced", "certain", "gained", "charged",
-      "rupture", "insisted", "extracted", "agitated", "over-the-top",
-      "middle-class", "itchy", "numb", "outlandish", "rooted",
-      "peculiar", "heated", "soothe", "plutocrats", "process"
+      "high-end","sourced","certain","gained","charged",
+      "rupture","insisted","extracted","agitated","over-the-top",
+      "middle-class","itchy","numb","outlandish","rooted",
+      "peculiar","heated","soothe","plutocrats","process"
     ];
     const definitions = [
       "expensive or of superior quality.",
@@ -198,37 +376,37 @@
     let score = 0;
     let answeredCount = 0;
     const answered = Array(20).fill(false);
-  
+
     function checkAnswer(i) {
       const idx = i - 1;
       if (answered[idx]) return;
       answered[idx] = true;
       answeredCount++;
-  
-      const inputEl = document.getElementById("input" + i);
-      const userAns = inputEl.value.trim().toLowerCase();
-      inputEl.disabled = true;
-  
+
+      const selectEl = document.getElementById("select" + i);
+      const userAns = selectEl.value;
+      selectEl.disabled = true;
+
       const btnEl = document.getElementById("btn" + i);
       btnEl.disabled = true;
-  
+
       const feedbackEl = document.getElementById("feedback" + i);
       if (userAns === answers[idx]) {
         score++;
-        feedbackEl.innerHTML = 
-          "Correct! Definition: " + definitions[idx] + 
+        feedbackEl.innerHTML =
+          "Correct! Definition: " + definitions[idx] +
           " Example: " + examples[idx];
       } else {
-        feedbackEl.innerHTML = 
-          "Incorrect. The correct answer is \"" + answers[idx] + 
-          "\". Definition: " + definitions[idx] + 
+        feedbackEl.innerHTML =
+          "Incorrect. The correct answer is \"" + answers[idx] +
+          "\". Definition: " + definitions[idx] +
           " Example: " + examples[idx];
       }
-  
+
       if (answeredCount === answers.length) {
         const percent = Math.round((score / answers.length) * 100);
-        document.getElementById("finalScore").textContent = 
-          "You scored " + score + " out of " + answers.length + 
+        document.getElementById("finalScore").textContent =
+          "You scored " + score + " out of " + answers.length +
           " (" + percent + "%).";
       }
     }
